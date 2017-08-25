@@ -86,7 +86,7 @@
     )
 
   (save-buffer)
-  (sonic-pi-osc-send-file)
+  (sonic-pi-send-text (point-min)(point-max))
   (hlt-highlight-regexp-region nil nil ".+" 'eval-sonic-pi-flash nil)
   (run-at-time flash-time nil 'hlt-unhighlight-region))
 
